@@ -9,9 +9,9 @@ return datar;
 fetched().then((datos)=>console.log(datos));
 
 Vue.component('navbar', {
-    template: `<nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    template: `<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">MARVEL CAVE</a>
+      <a class="navbar-brand" href="../HTML/index.html">MARVEL CAVE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -41,3 +41,4 @@ Vue.component('navbar', {
   </nav>`
 })
 new Vue({el:'#nav',});
+
