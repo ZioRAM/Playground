@@ -8,6 +8,7 @@ return datar;
 
 fetched().then((datos)=>console.log(datos));
 
+
 Vue.component('navbar', {
     template: `<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
