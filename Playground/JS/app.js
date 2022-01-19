@@ -1,13 +1,28 @@
-const api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+// const api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
 
-async function fetched(){
-const dataj=await fetch(api_url);
-const datar=await dataj.json()
-return datar;
+// async function fetched(){
+// const dataj=await fetch(api_url);
+// const datar=await dataj.json()
+// return datar;
+// };
+
+// fetched().then((datos)=>console.log(datos));
+
+var api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+var info = []
+async function traerDatos() {
+  let response = await fetch(api_url, {
+    method: "GET",
+  })
+  
+  let data = await response.json();
+  return data;
 }
-
-fetched().then((datos)=>console.log(datos));
-
+async function funcionNueva() {
+  await traerDatos().then(datos => { info= datos.data.results});
+  console.log(info)
+}
+funcionNueva()
 
 Vue.component('navbar', {
     template: `<nav class="navbar navbar-expand-lg navbar-light">
