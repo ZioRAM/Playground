@@ -8,24 +8,26 @@
 
 // fetched().then((datos)=>console.log(datos));
 
-const api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+const api_url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+const api_url2= "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
 var info = []
-async function traerDatos() {
-  let response = await fetch(api_url, {
+async function traerDatos(api) {
+  let response = await fetch(api, {
     method: "GET",
   })
-  
+
   let data = await response.json();
   return data;
 }
-async function funcionNueva() {
-  await traerDatos().then(datos => { info= datos.data.results});
+async function mostrarDatos(api) {
+  await traerDatos(api).then(datos => { info = datos.data.results });
   console.log(info)
 }
-funcionNueva()
+mostrarDatos(api_url);
+mostrarDatos(api_url2);
 
 Vue.component('navbar', {
-    template: `<nav class="navbar navbar-expand-lg navbar-light">
+  template: `<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
       <a id="navy" class="navbar-brand" href="../HTML/index.html">MARVEL CAVE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,10 +55,10 @@ Vue.component('navbar', {
     </div>
   </nav>`
 })
-new Vue({el:'#nav',});
+new Vue({ el: '#nav', });
 
-Vue.component('footy',{
-  template:`<footer  class="foo d-flex justify-content-around">
+Vue.component('footy', {
+  template: `<footer  class="foo d-flex justify-content-around">
   <div class="col d-flex align-items-center justify-content-center">
        © Copyright 2022
   </div>
@@ -76,5 +78,5 @@ Vue.component('footy',{
 </div>
 </footer>`
 })
-new Vue({el:'#foot',});
+new Vue({ el: '#foot', });
 

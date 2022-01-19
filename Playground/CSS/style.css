@@ -5,17 +5,17 @@
 html{
     min-height: 100vh;
     position: relative;
-    background-color: tomato;
+    background-color: #504a4a;
 }
 
 .navbar{
-    background-color: red;
+    background-color: 	#e23636;
 }
 .foo{
     height: 5%;
-    color: rgb(255, 255, 255);
+    color: #000000;
     font-weight: bold;
-    background-color: red;
+    background-color:  	#e23636;
     font-size:18px;
     position: absolute;
     bottom: 0%;
@@ -28,7 +28,7 @@ html{
 #navy{
     font-weight: bold;
     margin: 0;
-    background-color: rgb(255, 38, 0);
+    background-color:  	#e23636;
     color: yellow;
 }
 #navbarDropdown{
@@ -37,6 +37,6 @@ html{
 #navy2{
     font-weight: bold;
     margin: 0;
-    background-color: rgb(216, 123, 106);
+    background-color: #f78f3f;
     color: yellow;
 }
