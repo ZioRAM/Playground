@@ -25,3 +25,11 @@ html{
   color: yellow;
   text-decoration: none;
 }
+#navy{
+    margin: 0;
+    background-color: rgb(255, 38, 0);
+    color: yellow;
+}
+#navbarDropdown{
+    color: yellow;
+}
