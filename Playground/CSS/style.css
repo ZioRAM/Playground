@@ -2,34 +2,37 @@
     margin: 0;
     padding: 0;
 }
+
 html{
     min-height: 100vh;
     position: relative;
-    background-color: tomato;
+    background-color: 	#504a4a;
 }
 
 .navbar{
-    background-color: red;
+    background-color: #e23636;
 }
+
 .foo{
     height: 5%;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    background-color: red;
+    background-color: #e23636;
     font-size:18px;
     position: absolute;
     bottom: 0%;
     width: 100vw;
 }
 .links{
-  color: yellow;
+  color: #f78f3f;
   text-decoration: none;
 }
+
 #navy{
     margin: 0;
-    background-color: rgb(255, 38, 0);
-    color: yellow;
+    background-color: #e23636;
+    color: black;
 }
 #navbarDropdown{
-    color: yellow;
+    color: #f78f3f;
 }
