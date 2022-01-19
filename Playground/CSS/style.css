@@ -26,10 +26,17 @@ html{
   text-decoration: none;
 }
 #navy{
+    font-weight: bold;
     margin: 0;
     background-color: rgb(255, 38, 0);
     color: yellow;
 }
 #navbarDropdown{
+    color: yellow;
+}
+#navy2{
+    font-weight: bold;
+    margin: 0;
+    background-color: rgb(216, 123, 106);
     color: yellow;
 }
