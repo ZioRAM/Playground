@@ -4,12 +4,12 @@
 // const dataj=await fetch(api_url);
 // const datar=await dataj.json()
 // return datar;
-// }
-
+// };
 // fetched().then((datos)=>console.log(datos));
 
 const api_url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
 const api_url2= "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+
 var info = []
 async function traerDatos(api) {
   let response = await fetch(api, {
@@ -23,27 +23,31 @@ async function mostrarDatos(api) {
   await traerDatos(api).then(datos => { info = datos.data.results });
   console.log(info)
 }
+
 mostrarDatos(api_url);
 mostrarDatos(api_url2);
 
 Vue.component('navbar', {
   template: `<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
-      <a id="navy" class="navbar-brand" href="../HTML/index.html">MARVEL CAVE</a>
+      <a class="navbar-brand" href="../HTML/index.html">MARVEL CAVE</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul id="navy" class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li id="navy" class="nav-item dropdown">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              What's in here?
+              Dropdown
             </a>
-            <ul id="navy" class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a id="navy" class="dropdown-item" href="#">Movies</a></li>
-              <li><a id="navy" class="dropdown-item" href="#">Actors</a></li>
-              <li><hr id="navy" class="dropdown-divider"></li>
-              <li><a id="navy" class="dropdown-item" href="#">Characters</a></li>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Movies</a></li>
+              <li><a class="dropdown-item" href="#">Actors</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Characters</a></li>
             </ul>
           </li>
         </ul>
@@ -56,6 +60,7 @@ Vue.component('navbar', {
   </nav>`
 })
 new Vue({ el: '#nav', });
+
 
 Vue.component('footy', {
   template: `<footer  class="foo d-flex justify-content-around">
@@ -79,4 +84,5 @@ Vue.component('footy', {
 </footer>`
 })
 new Vue({ el: '#foot', });
+
 
