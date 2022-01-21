@@ -44,10 +44,8 @@ Vue.component('navbar', {
               Dropdown
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">Movies</a></li>
-              <li><a class="dropdown-item" href="#">Actors</a></li>
-              <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Characters</a></li>
+              <li><a class="dropdown-item" href="#">Events</a></li>
+              <li><a class="dropdown-item" href="#">Series</a></li>
             </ul>
           </li>
         </ul>
