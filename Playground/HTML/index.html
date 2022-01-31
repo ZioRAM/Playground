@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,29 +7,51 @@
     <title>MARVEL</title>
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
-
 <body>
     <div id="nav">
         <navbar></navbar>
     </div>
-
     <section>
+        <div class="card" style="width: 18rem;">
+            <img src=".." class="card-img-top" alt="/v1/public/series > series > thumbnail">
+            <div class="card-body">
+              <h5 class="card-title">/v1/public/series>Series>title</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">Card link</a>
+              <a href="#" class="card-link">Another link</a>
+            </div>
+          </div>
     </section>
-
-    <div id="foot">
-        <footy></footy>
-    </div>
-
+    <footer  class="foo d-flex justify-content-around">
+        <div class="col d-flex align-items-center justify-content-center">
+             © Copyright 2022
+        </div>
+        <div class="col d-flex align-items-center justify-content-center">
+           Team 2
+        </div>
+        <div class="col d-flex align-items-center justify-content-end">
+            Contact:
+        </div>
+        <div class="col d-flex flex-row align-items-center justify-content-evenly">
+            <a class="links" href="">Pato</a>
+            <a class="links" href="">Sele</a>
+            <a class="links" href="">Meli</a>
+            <a class="links" href="">Eze</a>
+        </div>
+        
+      </div>
+    </footer>
+    
     <script src="../JS/app.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
-
 </html>
