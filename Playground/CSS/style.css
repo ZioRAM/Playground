@@ -2,56 +2,26 @@
     margin: 0;
     padding: 0;
 }
-
 html{
     min-height: 100vh;
     position: relative;
-    background-color: #504a4a;
+    background-color: tomato;
 }
 
 .navbar{
-    background-color: 	#e23636;
-    background-color: 	#504a4a;
+    background-color: red;
 }
-
-.navbar{
-    background-color: #e23636;
-
-}
-
 .foo{
     height: 5%;
-    color: #000000;
+    color: rgb(255, 255, 255);
     font-weight: bold;
-    background-color:  	#e23636;
-    background-color: #e23636;
+    background-color: red;
     font-size:18px;
     position: absolute;
     bottom: 0%;
     width: 100vw;
 }
 .links{
-  color: #f78f3f;
+  color: yellow;
   text-decoration: none;
-}
-
-#navy{
-    font-weight: bold;
-    margin: 0;
-    background-color:  	#e23636;
-    color: yellow;
-}
-#navbarDropdown{
-    color: yellow;
-}
-#navy2{
-    font-weight: bold;
-    margin: 0;
-    background-color: #f78f3f;
-    color: yellow;
-    background-color: #e23636;
-    color: black;
-}
-#navbarDropdown{
-    color: #f78f3f;
 }
