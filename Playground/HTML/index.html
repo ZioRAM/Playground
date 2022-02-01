@@ -13,18 +13,14 @@
     <div id="nav">
         <navbar></navbar>
     </div>
-    
-    <div id="card">
-        <card></card>
-    </div>
-    
-    <!-- <section>
-        <div class="card" style="width: 18rem;">
-            <img src=".." class="card-img-top" alt="/v1/public/series > series > thumbnail">
+     
+    <section id="card" >
+        <div v-for="elemento in cartas" :key="elemento.id" class ="card" style="width: 18rem;">
+            <img :src="elemento.thumbnail.path + '.' + elemento.thumbnail.extension" class="card-img-top" alt="/v1/public/series > series > thumbnail">
             <div class="card-body">
-              <h5 class="card-title">/v1/public/series>Series>title</h5>
+              <h5 class="card-title">{{elemento.title}}</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
+        </div>
             <ul class="list-group list-group-flush">
               <li class="list-group-item">An item</li>
               <li class="list-group-item">A second item</li>
@@ -35,7 +31,8 @@
               <a href="#" class="card-link">Another link</a>
             </div>
           </div>
-    </section> -->
+    </section>
+    
     <footer id="foot">
           <footy></footy>
     </footer>
