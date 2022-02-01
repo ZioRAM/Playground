@@ -1,15 +1,4 @@
-// const api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
-
-// async function fetched(){
-// const dataj=await fetch(api_url);
-// const datar=await dataj.json()
-// return datar;
-// };
-// fetched().then((datos)=>console.log(datos));
-
-
-var api_url= "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
-const api_url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
+// const api_url = "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
 const api_url2= "https://gateway.marvel.com:443/v1/public/series?ts=1&apikey=171586c59cef540df3c5a68aeaffd948&hash=c862d1e875614852cac5ef31b0a169f5"
 
 var info = []
@@ -21,13 +10,45 @@ async function traerDatos(api) {
   let data = await response.json();
   return data;
 }
+
 async function mostrarDatos(api) {
-  await traerDatos(api).then(datos => { info = datos.data.results });
-  console.log(info)
+  await traerDatos(api).then(datos => { info = datos.data.results});
+  card=new Vue({ el:'card', 
+data:{
+  titulo:[],
+  url:[]
+}
+})
+let eso = info.filter(item => item.id == 18454);
+  
+  console.log(eso)
+  
 }
 
-mostrarDatos(api_url);
-mostrarDatos(api_url2);
+
+// mostrarDatos(api_url);
+// mostrarDatos(api_url2);
+
+
+Vue.component('card',{
+  template: `<div class="card" style="width: 18rem;">
+  <img :src="url" class="card-img-top" alt="/v1/public/series > series > thumbnail">
+  <div class="card-body">
+    <h5 class="card-title">{{titulo}}</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>
+</div>`
+})
+
 
 Vue.component('navbar', {
   template: `<nav class="navbar navbar-expand-lg navbar-light">
